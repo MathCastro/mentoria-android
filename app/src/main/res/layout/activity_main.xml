@@ -31,13 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <Button
-        android:id="@+id/buttonListView"
+        android:id="@+id/buttonNavigationParams"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/buttonMarginHorizontal"
         android:layout_marginTop="@dimen/buttonMarginTop"
         android:layout_marginRight="@dimen/buttonMarginHorizontal"
-        android:text="Button"
+        android:text="Navigation Params"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLayout" />
