@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonListView: Button
     private lateinit var lifecycleButton: Button
     private lateinit var loginButton: Button
+    private lateinit var recyclerButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         buttonListView = findViewById(R.id.button_listview)
         lifecycleButton = findViewById(R.id.lifecicle_button)
         loginButton = findViewById(R.id.login_button)
+        recyclerButton = findViewById(R.id.recycler_button)
 
         buttonLayout.setOnClickListener {
             val intent = Intent(this, LayoutActivity::class.java)
@@ -47,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
         loginButton.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        recyclerButton.setOnClickListener {
+            val intent = Intent(this, RecyclerActivity::class.java)
             startActivity(intent)
         }
 

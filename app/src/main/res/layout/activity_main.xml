@@ -78,4 +78,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_listview" />
 
+    <Button
+        android:id="@+id/recycler_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/buttonMarginHorizontal"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginEnd="@dimen/buttonMarginHorizontal"
+        android:text="Recycler View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
