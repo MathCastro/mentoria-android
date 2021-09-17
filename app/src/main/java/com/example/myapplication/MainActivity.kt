@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonLayout: Button
     private lateinit var buttonNavigationParams: Button
     private lateinit var buttonListView: Button
+    private lateinit var lifecycleButton: Button
+    private lateinit var loginButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,19 +20,33 @@ class MainActivity : AppCompatActivity() {
         buttonLayout = findViewById(R.id.buttonLayout)
         buttonNavigationParams = findViewById(R.id.buttonNavigationParams)
         buttonListView = findViewById(R.id.button_listview)
+        lifecycleButton = findViewById(R.id.lifecicle_button)
+        loginButton = findViewById(R.id.login_button)
 
         buttonLayout.setOnClickListener {
             val intent = Intent(this, LayoutActivity::class.java)
             startActivity(intent)
         }
         buttonNavigationParams.setOnClickListener {
+            var user: User = User(email = "teste@teste.com")
             val intent = Intent(this, NavigationParamsActivity::class.java)
             intent.putExtra("key", "Mentoria Carrefour")
+            intent.putExtra("serializable", user)
             startActivity(intent)
         }
 
         buttonListView.setOnClickListener {
             val intent = Intent(this, ListViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        lifecycleButton.setOnClickListener {
+            val intent = Intent(this, LifecycleActivity::class.java)
+            startActivity(intent)
+        }
+
+        loginButton.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 

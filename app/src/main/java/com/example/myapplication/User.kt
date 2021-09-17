@@ -1,3 +1,5 @@
 package com.example.myapplication
 
-data class User(val email: String)
+import java.io.Serializable
+
+data class User(val email: String) : Serializable

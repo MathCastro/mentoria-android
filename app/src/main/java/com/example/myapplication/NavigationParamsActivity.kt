@@ -15,8 +15,8 @@ class NavigationParamsActivity : AppCompatActivity() {
 
         val extras = intent.extras
         if (extras != null) {
-            val value = extras.getString("key")
-            textNavigationParam.text = value
+            val value = extras.getSerializable("serializable") as User
+            textNavigationParam.text = value.email
         }
     }
 }
