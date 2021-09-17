@@ -42,4 +42,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLayout" />
 
+    <Button
+        android:id="@+id/button_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/buttonMarginHorizontal"
+        android:layout_marginTop="@dimen/buttonMarginTop"
+        android:layout_marginEnd="@dimen/buttonMarginHorizontal"
+        android:text="List View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNavigationParams" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

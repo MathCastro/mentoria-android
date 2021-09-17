@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var buttonLayout: Button
     private lateinit var buttonNavigationParams: Button
+    private lateinit var buttonListView: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonLayout = findViewById(R.id.buttonLayout)
         buttonNavigationParams = findViewById(R.id.buttonNavigationParams)
+        buttonListView = findViewById(R.id.button_listview)
 
         buttonLayout.setOnClickListener {
             val intent = Intent(this, LayoutActivity::class.java)
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         buttonNavigationParams.setOnClickListener {
             val intent = Intent(this, NavigationParamsActivity::class.java)
             intent.putExtra("key", "Mentoria Carrefour")
+            startActivity(intent)
+        }
+
+        buttonListView.setOnClickListener {
+            val intent = Intent(this, ListViewActivity::class.java)
             startActivity(intent)
         }
 
